@@ -7,12 +7,59 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/accText"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Accelerometer Data"/>
+
+    <com.nestedapps.izabulkhaled.myshake.CustomView
+        android:id="@+id/xyzView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@+id/accText"/>
+
+    <TextView
+        android:id="@+id/FFTText"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="FFT Viewr"
+        app:layout_constraintTop_toBottomOf="@+id/xyzView"/>
+
+    <com.nestedapps.izabulkhaled.myshake.FFTView
+        android:id="@+id/fftView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@+id/FFTText"/>
+
+    <TextView
+        android:id="@+id/sampleSize"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/fftView"/>
+
+    <SeekBar
+        android:id="@+id/seekBarSampleData"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/sampleSize"/>
+
+    <TextView
+        android:id="@+id/windowSize"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarSampleData"/>
+    />
+
+    <SeekBar
+        android:id="@+id/seekBarWindowSize"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/windowSize"/>
+
+
 
 </android.support.constraint.ConstraintLayout>
