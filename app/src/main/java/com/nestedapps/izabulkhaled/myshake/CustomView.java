@@ -46,12 +46,12 @@ public class CustomView extends View{
 
     private void init(@Nullable AttributeSet attrs) {
             // Load attributes
-
         viewData.add(new AccelerometerViewData(10f,18f,.3f));
         viewData.add(new AccelerometerViewData(.0f,20f,.3f));
         viewData.add(new AccelerometerViewData(7f,-20f,22f));
         viewData.add(new AccelerometerViewData(.9f,2f,.3f));
 
+        //Set color points
         redPaint.setColor(Color.RED);
         redPaint.setStrokeWidth(5);
         greenPaint.setColor(Color.GREEN);
